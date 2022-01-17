@@ -34,7 +34,7 @@ class ItJobsWatchHomePageTop30:
             job_list.append(job)
 
         job_list.pop(0)
-        return job_list
+        return job_list[0:30]
 
 if __name__ == '__main__':
     print(ItJobsWatchHomePageTop30(itjobswatch_home_page_test_file()))
