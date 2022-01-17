@@ -1,0 +1,361 @@
+{% extends "master.html" %}
+
+{% block CSS %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block title %}
+<title>Sparta Global | Home</title>
+
+<style>
+    body {
+        padding-top: 56px;
+        background-color: white;
+    }
+    .aligner { vertical-align:bottom !important}
+
+    .fa{    padding: 0px 18px;transition: transform .2s;}
+    .fa:hover {transform: scale(1.1); }
+
+    .shadow-card:hover{box-shadow:0 3px 3px rgba(0,0,0,0.14);transition: box-shadow ease-in-out;}
+
+    .opaque:hover{opacity:0.8;}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #01181b">
+    <div class="container">
+      <a href="https://www.spartaglobal.com/"><img class="masthead-brand" src="../static/images/Sparta-global-logo-white.svg" alt="" width="200" height="80"></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarResponsive" style="">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/" style="color: white; font-weight: bold">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/meet_team" style="color: white; font-weight: bold">Meet the Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data" style="color: white; font-weight: bold">Top 30 IT Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3 text-center" style="font-family: Roboto Mono"><span style="color: #01181b">Engineering</span> <span style="color: #B20059">67</span></h1>
+      <p class="font-weight-normal lead text-center">
+        <span class="font-weight-bold">Welcome!!</span> we are the <span style="color: #B20059"> Engineering 67 </span>
+        Stream at Sparta Global training in <span style="color: #B20059">DevOps.</span>
+        <br>
+        <h2 class="text-center " style="font-family: Roboto Mono"><span style="color: #01181b">The</span> <span style="color: #B20059">Project</span></h2>
+        <p class="font-weight-bold">The aim of this project was to achieve end to end automation with a python app. The app displays information regarding IT Jobs, and we created a Continuous Integration, Delivery and Deployment pipeline. This was achieved with Jenkins, Containerisation with Docker to create microservice architecture and finally; use AWS instances to deploy the application on a public webpage.
+      </p>
+          <div class="text-center">
+            <a href="/meet_team" class="btn btn-lg text-white btn-block font-weight-bold" style="background-color: #033034; font-family: !important 'Roboto'">See the Team!</a>
+            <a href="/data" class="btn btn-lg text-white btn-block font-weight-bold" style="background-color: #04444a; font-family:!important 'Roboto'">Top 30 IT Jobs</a>
+            <a href="https://www.spartaglobal.com/" class="btn btn-lg btn-block text-white font-weight-bold" style="background-color: #06656e; font-family:!important 'Roboto'">Sparta Global Website</a>
+          </div>
+    </header>
+
+  <header class="jumbotron jumbotron-flexible" style="background-color: #01181b ">
+    <h1 class="display-4 text-center text-white" style="font-family: Roboto Mono">Our ToolChain</h1>
+  </header>
+
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/ansiblelogo.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Ansible</h4>
+            <p class="card-text">Ansible is an open-source software provisioning,
+              configuration management, and application-deployment tool enabling infrastructure as code.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.ansible.com/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/aosborne17/AWS-With-Ansible" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/jenkins.jpg" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Jenkins</h4>
+            <p class="card-text">Jenkins is a free and open source automation server.
+              It helps automate the parts of software development related to building,
+              testing, and deploying, facilitating continuous integration and continuous delivery.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.jenkins.io/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/naistangz/Docker_Jenkins_Pipeline" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/terraform.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Terraform</h4>
+            <p class="card-text">Terraform is a tool for building, changing,
+              and versioning infrastructure safely and efficiently.
+              Terraform can manage existing and popular service providers as well as custom in-house solutions.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.terraform.io/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/Spartabariallali/eng67_terraform" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/awslogo.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">AWS</h4>
+            <p class="card-text">AWS (Amazon Web Services) is a comprehensive,
+              evolving cloud computing platform provided by Amazon that includes a mixture of infrastructure as a service (IaaS),
+              platform as a service (PaaS) and packaged software as a service (SaaS) offerings.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://aws.amazon.com/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/Terraform" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/python.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Python</h4>
+            <p class="card-text">Python is an interpreted, high-level and general-purpose programming language. Created by Guido van Rossum and first released in 1991,
+              Python's design philosophy emphasizes code readability and is sometimes seen as the closest resembling language to our own. Its simple and very widely used in industry.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.python.org/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/Airport_Project" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/docker.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Docker</h4>
+            <p class="card-text">Docker is a set of platform as a service products that use
+              OS-level virtualization to deliver software in packages called containers.
+              Containers are isolated from one another and bundle their own software, libraries and configuration files;
+              they can communicate with each other through well-defined channels.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.docker.com/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/naistangz/Docker_demo" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/SQL.jpg" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">MySQL</h4>
+            <p class="card-text">MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.mysql.com/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/naistangz/Technical_Training/blob/master/docs/Week2_SQL/SQL_Projects/SQL_FinalProject.md" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/GitHub.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">GitHub</h4>
+            <p class="card-text">GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+            It is built on the distributed version-control system for tracking changes in source code and software development known as Git.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.github.com" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/Lycurgus1" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/vagrant.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Vagrant</h4>
+            <p class="card-text">Vagrant is an open-source software product for building and maintaining portable virtual software development environments; for example
+            VMs, Docker-containers and AWS services. This was used alongside Ruby and Oracle VM to create, orchestrate and provision
+            Virtual machines on our machines using the windows hypervisor.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.vagrantup.com/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/aosborne17/Ansible-With-Vagrant" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/linux.jpg" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Linux</h4>
+            <p class="card-text">Linux is a family of open source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds.
+            Many distributions of the linux exist such as Ubuntu which is based on Debian. Linux has evolved into
+            one of the most reliable computer ecosystems on the planet.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.linux.org/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/aosborne17/Linux-Commands" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/microservices.jpg" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Microservices</h4>
+            <p class="card-text">Microservice architecture – a variant of the service-oriented architecture structural style –
+              arranges an application as a collection of loosely coupled services. In a microservices architecture,
+              services are fine-grained and the protocols are lightweight. These come with a range of benefits such as easy maintenance, scalability
+            and high availability and can be achieved using a containerisation platform like docker.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://microservices.io/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/Spartabariallali/Microservices_Docker_Nodejs_App" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/flask.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Flask</h4>
+            <p class="card-text">Flask is a micro web framework written in Python.
+              It is classified as a microframework because it does not require particular tools or libraries.
+              It has no database abstraction layer, form validation, or any other components where pre-existing
+              third-party libraries provide common functions. This encourages the MVC software design pattern in web development,
+            segregating the front-end to back-end.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://flask.palletsprojects.com/en/1.1.x/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/MVC_Flask" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/nginx.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">NGINX</h4>
+            <p class="card-text">is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+            It is free and open-source, and it widely used amongst large organisations for its functionality as a load
+            balancer. As mentioned it can also perform reverse proxies to run apps on specific ports.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://nginx.org/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/VM_Proxy_Machine" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/kubernetes.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Kubernetes</h4>
+            <p class="card-text">Kubernetes is an open-source container-orchestration system for automating computer application deployment,
+              scaling, and management. It was originally designed by Google and is now maintained by the Cloud Native Computing Foundation. </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://kubernetes.io/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/VM_Proxy_Machine" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/agile.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Agile Methodology</h4>
+            <p class="card-text">In software development, agile approaches development requirements and solutions through
+              the collaborative effort of self-organizing and cross-functional teams and their customer/end user. We used that
+            along with the help of the SCRUM Framework to organise, plan and carry out our software development project.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://agilemanifesto.org/" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://trello.com/b/eZdQiVQU/engineering-67" target="_blank"><i class="fa fa-trello" style="font-size:40px; color:#186aa2;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="shadow-card card h-100">
+          <img class="opaque card-img-top text-center" src="../static/images/teams.png" alt="" style="display:block; margin-left: auto; margin-right: auto; width: 50%;">
+          <div class="card-body">
+            <h4 class="card-title">Teams</h4>
+            <p class="card-text">Microsoft Teams is a Universal communication and collaboration platform that combines persistent workplace chat,
+              video meetings, file storage, and application integration. This is what has been used throughout
+            the training to communicate with each other and carry out training meetings.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.microsoft.com/en-gb/microsoft-365/microsoft-teams/group-chat-software" class="aligner btn btn-primary">Find Out More!</a>
+            <a href="https://github.com/JohnByrneJames/SpartaGlobalRepo" target="_blank"><i class="fa fa-github" style="font-size:40px; color:black;"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- /.row -->
+
+  </div>
+
+<footer class="py-3" style="background-color: #01181b">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright © Engineering 67 | 2020 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+{% endblock %}
