@@ -19,7 +19,7 @@ class ItJobsWatchHomePageTop30:
 
         for item in self._get_top_30_table_headers().find_all('th'):
             table_headers_list.append(item.text)
-        table_headers_list.pop(0)
+#    table_headers_list.pop(0)
 
         return table_headers_list
 
@@ -38,4 +38,3 @@ class ItJobsWatchHomePageTop30:
 
 if __name__ == '__main__':
     print(ItJobsWatchHomePageTop30(itjobswatch_home_page_test_file()))
-
