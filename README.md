@@ -1,4 +1,8 @@
-# IT Jobs Watch Data
+# End-to-End Automation
+
+## Project Diagram 
+
+![](img/project_diagram.svg)
 
 ## Introduction
 The aim of this project is to create a simple service that can scrape useful data from ITJobswatch.
