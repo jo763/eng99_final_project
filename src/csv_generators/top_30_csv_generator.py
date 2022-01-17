@@ -8,7 +8,7 @@ class Top30CSVGenerator:
             writer = csv.writer(top30csv)
             if headers_array is not None:
                 writer.writerow(headers_array)
-            writer.writerows(top_30_array)
+            writer.writerows(top_30_array[0:30])
 
 
 if __name__ == '__main__':
