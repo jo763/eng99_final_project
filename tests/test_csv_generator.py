@@ -62,7 +62,7 @@ class TestCSVGenerator:
 
     def test_csv_without_headers_default_location(self):
         list_count = 0
-        with open(os.path.expanduser('~/Downloads/') + 'ItJobsWatchTop30.data') as top_30_without_headers:
+        with open(os.getcwd().replace("\\","/") + '/Flask/Downloads/' + 'ItJobsWatchTop30.csv') as top_30_without_headers:
             parsed_csv_file = csv.reader(top_30_without_headers)
             for line in parsed_csv_file:
                 list_count += 1
