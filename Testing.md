@@ -51,3 +51,41 @@ Task:
 6. Look for HAR file previously exported
 7. Run gatling.bat and select option for the file exported
 8. Gatling test IP given
+
+
+# Creating Gatling Testing Server
+1. Create an EC2 instance on Ubuntu 18.04 with t2 micro allowing all traffic for the security group
+2. SSH into EC2 instance 
+3. Run the following commands to install java and gatling:
+```bash
+#!bin/bash
+---
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt install default-jre -y
+sudo apt install unzip -y
+unzip gatling-charts-highcharts-bundle-3.7.2-bundle.zip
+./gatling.sh
+sudo nano RecordedSimulation  # har file scala script from duckduckgo/file created in simulations folder
+./gatling.sh -s duckduckgo #automatically runs that simualtion
+
+
+```
+## Testing Server Instance AMI
+ami-092bd8a9dcde95d89
+
+## Jenkins Server Instance AMI
+ami-0a56d3fcc26eaa7a2
+
+## Create Jenkins Testing job
+1. Create a new job
+2. Build Environment > SSH Agent > SSH username with private key > copy eng99.pem key directly in > Add
+3. Build > Execute Shell > 
+```
+ssh -A -o "StrictHostKeyChecking=no" ubuntu@34.247.244.181 << EOF
+touch checking.txt
+cd gatling-charts-highcharts-bundle-3.7.2/bin
+./gatling.sh -s duckduckgo
+
+EOF
+```
