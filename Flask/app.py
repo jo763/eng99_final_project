@@ -20,7 +20,7 @@ def meet_team():
 @app.route("/data", methods=['GET'])
 def data():
     # /usr/src/app/Downloads
-    with open('Downloads/ItJobsWatchTop30.csv') as csv_file:
+    with open('Downloads/ItJobsWatchTop30.data') as csv_file:
         data = csv.reader(csv_file, delimiter=',')
         jobs = []
         no1job = []
