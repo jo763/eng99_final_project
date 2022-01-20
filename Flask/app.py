@@ -11,6 +11,7 @@ PORT=5000
 def base():
 
     return render_template("new_homepage.html")
+    #return render_template("meet_team.html")
 
 
 @app.route("/meet_team")
