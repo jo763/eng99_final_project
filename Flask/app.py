@@ -22,8 +22,7 @@ def meet_team():
 def data():
     # /usr/src/app/Downloads
     cwd = os.getcwd()
-    print(cwd + '/Flask/Downloads/ItJobsWatchTop30.csv')
-    with open(cwd + '/ItJobsWatchTop30.csv') as csv_file:
+    with open(cwd + '/Flask/Downloads/ItJobsWatchTop30.csv') as csv_file:
         data = csv.reader(csv_file, delimiter=',')
         jobs = []
         no1job = []
