@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, session, flash, g
 from functools import wraps
 import csv
+import os
 
 app = Flask(__name__)
 
@@ -20,7 +21,9 @@ def meet_team():
 @app.route("/data", methods=['GET'])
 def data():
     # /usr/src/app/Downloads
-    with open('ItJobsWatchTop30.csv') as csv_file:
+    cwd = os.getcwd()
+    print(cwd + '/ItJobsWatchTop30.csv')
+    with open(cwd + '/ItJobsWatchTop30.csv') as csv_file:
         data = csv.reader(csv_file, delimiter=',')
         jobs = []
         no1job = []
